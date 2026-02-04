@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import io
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
@@ -18,7 +19,15 @@ from visualization import (
 
 st.set_page_config(page_title="Feedback Analytics", layout="wide")
 
-st.title("Local-First Feedback Analytics")
+style_path = Path(__file__).with_name("styles.css")
+if style_path.exists():
+    st.markdown(f"<style>{style_path.read_text()}</style>", unsafe_allow_html=True)
+
+st.markdown(
+    \"\"\"\n    <div class=\"app-header\">\n      <h1>Local-First Feedback Analytics</h1>\n      <p>Private, offline-ready insights for weekly institutional feedback reviews.</p>\n    </div>\n    \"\"\",\n    unsafe_allow_html=True,\n)
+
+st.markdown(
+    \"\"\"\n    <div class=\"section-card\">\n      <h3>Get Started</h3>\n      <p>Upload a CSV or XLSX file, confirm the feedback column, then run Quick or AI analysis.</p>\n    </div>\n    \"\"\",\n    unsafe_allow_html=True,\n)
 
 uploaded_file = st.file_uploader("Upload feedback file", type=["csv", "xlsx"])
 

@@ -1,0 +1,44 @@
+:root {
+  --primary: #2f5597;
+  --accent: #1f7a8c;
+  --background: #f5f7fb;
+  --card: #ffffff;
+  --border: #e3e8f0;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.app-header {
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 12px 24px rgba(31, 122, 140, 0.2);
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.app-header p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.section-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 16px rgba(25, 45, 75, 0.08);
+}
+
+.section-card h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
