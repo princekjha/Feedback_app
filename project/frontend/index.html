@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Analytics (Local UI)</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+        font-family: "Segoe UI", system-ui, sans-serif;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .pill {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(47, 85, 151, 0.1);
+        color: #2f5597;
+        font-size: 0.85rem;
+      }
+
+      .panel {
+        background: #ffffff;
+        border: 1px solid #e3e8f0;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 8px 20px rgba(25, 45, 75, 0.08);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 0.75rem;
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 0.5rem 0.75rem;
+        border-bottom: 1px solid #eef1f6;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="app-header">
+        <h1>Local-First Feedback Analytics</h1>
+        <p>Static HTML preview to test layout and styling without Streamlit.</p>
+      </div>
+
+      <div class="section-card">
+        <h3>Workflow</h3>
+        <p>
+          Use this static view to review layout, then run the Python analysis engine
+          separately. Streamlit code remains in <code>project/app.py</code> (commented)
+          for local execution.
+        </p>
+        <span class="pill">Quick Mode</span>
+        <span class="pill">AI Mode (optional)</span>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <h4>Sentiment Distribution</h4>
+          <table>
+            <tr><th>Label</th><th>Count</th></tr>
+            <tr><td>Positive</td><td>42</td></tr>
+            <tr><td>Neutral</td><td>28</td></tr>
+            <tr><td>Negative</td><td>15</td></tr>
+          </table>
+        </div>
+        <div class="panel">
+          <h4>Intent Distribution</h4>
+          <table>
+            <tr><th>Label</th><th>Count</th></tr>
+            <tr><td>Suggestion</td><td>18</td></tr>
+            <tr><td>Complaint</td><td>14</td></tr>
+            <tr><td>Appreciation</td><td>25</td></tr>
+          </table>
+        </div>
+        <div class="panel">
+          <h4>Latest Insights</h4>
+          <p>
+            "Facilities were clean, but registration should be faster next time."
+          </p>
+          <p><strong>Sentiment:</strong> Neutral</p>
+          <p><strong>Intent:</strong> Suggestion</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
